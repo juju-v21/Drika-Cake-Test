@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drika Cake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+       <img src="drika cake B/background1.jpg" class="banner">
+       <a href="#" class="logo">Drika Cake</a>
+       <div class="toggle"></div>
+       <nav>
+           <ul>
+               <li> <a href="#description">a propos</a> </li>
+               <li><a href="#gallerie">gallerie</a></li>
+               <li><a href="#form">formulaire</a></li>
+               <li><a href="#">contact</a></li>
+           </ul>
+       </nav>
+   </header>
+
+<section id="description">
+    <h1>Presentation</h1>
+<div class="container">
+    <div class="card">
+        <div class="content">
+            <h2>la chef</h2>
+            <p>C'est la chef qui prépare les gataux</p>
+        </div>
+        <img src="drika cake B/bryan1.png">
+    </div>
+    <div class="card">
+        <div class="content">
+            <h2>Les gateaux</h2>
+            <p>vous pouvez commander les gateaux en utilisant le formulaire et le paiement ultra sécurisé ce fait par mail</p>
+      <span>read more</span>
+        </div>
+        <img src="drika cake B/gateau.png">
+    </div>
+</div>
+</section>
+
+<section id="gallerie">
+<div class="container-img">
+    <h2>gallerie</h2>
+    <div class="image-container">
+        <div class="image"><img src="drika cake B/lecuisinier.jpg"></div>
+        <div class="image"><img src="drika cake B/gateaublanc.png"></div>
+        <div class="image"><img src="drika cake B/gateau.png"></div>
+        <div class="image"><img src="drika cake B/background3.jpg"></div>
+        <div class="image"><img src="drika cake B/bryan1.png"></div>
+        <div class="image"><img src="drika cake B/263424-P4VB1I-927.jpg"></div>
+    </div>
+
+<div class="popup-image">
+    <span>&times;</span>
+    <img src="drika cake B/lecuisinier.jpg">
+</div>
+
+</div>
+</section>
+
+<section id="form">
+    <h2 class="title-form">formulaire</h2>
+    <form action="" method="POST" onsubmit="sendRequest(event)">
+
+        <input type="text" name="name" id="name" placeholder="nom" required>
+        <input type="text" name="firstname" id="firstname" placeholder="prenom" required>
+        <input type="email" name="email" id="emailAddress" placeholder="mail" required>
+        <input type="email" name="confirmationemail" id="confirmationemail" placeholder="confirm mail" required>
+        <input type="text" name="sujet" id="sujet" placeholder="sujet" required>
+        <textarea id="msg" name="message" placeholder="votre message" required></textarea>
+        <input type="submit" onclick="confirmEmail(), messageVide()" value="Envoyer">
+
+    </form>
+</section>
+   <script src="script.js"></script>
+</body>
+</html>

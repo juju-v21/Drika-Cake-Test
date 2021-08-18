@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    /* background-image: url(drika\ cake\ B/background1.jpg); */
+  background-position: center;
+  
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 0 100px;
+    background: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: 1s;
+    z-index: 5;
+}
+
+header.sticky{
+    height: 80px;
+}
+
+header .banner{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: 1s;
+}
+
+header.sticky .banner{
+    opacity: 0.5;
+}
+
+header .logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 15vw;
+    color: white;
+    font-weight: 700;
+    transition: 1s;
+    text-decoration: none;
+    z-index: 3;
+    text-align: center;
+}
+
+header.sticky .logo{
+    position: absolute;
+    font-size: 2em;
+    left: 100px;
+    transform: translate(0%, -50%);
+}
+
+nav{
+    position: relative;
+    display: flex;
+    z-index: 2;
+}
+
+nav ul{
+    position: relative;
+    display: flex;
+    transition: 0.25s;
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+nav.active ul
+{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 80px);
+    background: black;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+nav ul li a 
+{
+    font-size: 1.2em;
+}
+
+header.sticky nav ul{
+    transform: translateX(0px);
+    opacity: 1;
+    transition-delay: 0.75s;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: white;
+    display: inline-block;
+    padding: 5.7px 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: blanchedalmond;
+}
+
+@media (max-width: 991px)
+{
+    section,header
+    {
+        padding: 40px;
+    }
+header.sticky .logo{
+    left: 40px;
+}
+header.sticky .banner{
+    opacity: 0;
+}
+nav ul{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+header.sticky .toggle
+{
+position: fixed;
+top: 15px;
+right: 40px;
+width: 50px;
+height: 50px;
+cursor: pointer;
+background: white url(drika\ cake\ B/menu.png);
+background-size: 30px;
+background-repeat: no-repeat;
+background-position: center;
+}
+
+header.sticky .toggle.active
+{
+    background: white url(drika\ cake\ B/close.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+}
+
+/* presentation                        */
+
+#description{
+    margin-top: 10vh;
+    padding: 100px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6vh;
+    font-size: 6vw;
+    color:#fce7ba;
+    font-family: 'poppins', sans-serif;
+}
+
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.container .card
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    transition: 0.5s;
+    align-items: center;
+    background: linear-gradient(45deg,#607c92,#95c7f1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.container .card img
+{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+
+.container .card:hover img
+{
+    left: 71%;
+    height: 500px;
+}
+.container .card .content
+{
+    position: relative;
+    width: 50%;
+    left: 20%;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.container .card:hover .content
+{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.container .card .content h2
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+
+.container .card .content p
+{
+color: white;
+}
+
+@media (max-width: 911px)
+{
+    .container .card
+    {
+        width: auto;
+        max-width: 600px;
+        align-items: flex-start;
+    }
+
+    .container .card:hover
+    {
+        height: 600px;
+    }
+
+    .container .card:hover img
+    {
+        left: 50px;
+        height: 350px;
+    }
+
+    .container .card .content
+    {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 767px)
+{
+     .container {
+         flex-direction: column;
+     }
+     .container .card
+     {
+         margin: 40px 20px;
+     }
+}
+
+
+@media (max-width: 420px)
+{
+    .container .card .content
+    {
+        padding: 30px;
+    }
+
+    .container .card:hover img 
+    {
+      height: 300px;
+    }
+} 
+
+                        /* Gallerie */
+
+#gallerie
+{
+    margin-top: 39px;
+    box-sizing: border-box;
+}
+
+.container-img
+{
+    position: relative;
+    min-height: 100vh;
+}
+
+.container-img h2{
+    display: flex;
+    justify-content: center;
+    font-size: 6vw;
+    font-family: 'poppins', sans-serif;
+    margin-top: 7vh;
+    margin-bottom: 6vh;
+    color: #fce7ba;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container-img .image-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container-img .image-container .image{
+height: 250px;
+width: 350px;
+border: 10px solid white;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+cursor: pointer;
+}
+
+.container-img .image-container .image img{
+    height: 250px;
+width: 350px;
+object-fit: cover;
+transition: 0.2s, linear;
+}
+
+.container-img .image-container .image:hover img
+{
+transform: scale(1.1);
+}
+
+.container-img .popup-image
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 90;
+    display: none;
+}
+
+.container-img .popup-image span
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.container-img .popup-image img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media (max-width: 765px)
+{
+    .container-img .popup-image .img
+    {
+        width: 95px;
+    }
+} 
+
+
+/* formulaireeeeeeeeeeeeeeeeeeee */
+
+
+.title-form
+{
+    display: flex;
+    justify-content: center;
+    font-size: 6vw;
+    font-family: 'poppins', sans-serif;
+    margin-top: 7vh;
+    margin-bottom: 6vh;
+    color: #fce7ba;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+form {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, minmax(50px, auto));
+    grid-template-areas: "nom" "prenom" "mail" "confmail" "sujet" "message" "submit";
+    top: 10px;
+}
+
+input,
+textarea {
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: large;
+}
+
+@media screen and (min-width: 768px) {
+    form {
+        display: grid;
+        width: 90%;
+        margin: auto;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: "nom prenom" "mail confmail" "sujet sujet" "message message" "submit submit";
+    }
+}
+
+input[name=name] {
+    grid-area: nom;
+}
+
+input[name=firstname] {
+    grid-area: prenom;
+}
+
+input[name=email] {
+    grid-area: mail;
+}
+
+input[name=confirmationemail] {
+    grid-area: confmail;
+}
+
+input[name=sujet] {
+    grid-area: sujet;
+}
+
+textarea[name=message] {
+    grid-area: message;
+}
+
+input[type=submit] {
+    grid-area: submit;
+}
+
+input[type=submit]:hover {
+    font-size: 125%;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+::selection {
+    background: #4985df;
+}
+
+.bordure {
+    background-color: red;
+}
